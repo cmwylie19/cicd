@@ -17,3 +17,13 @@ test('Correct users returned', function (t) {
       t.end();
     });
 });
+
+
+test('Correctly display landing route', function (t) {
+  request(app)
+    .get('/')
+    
+    .expect('Content-Type', /json/)
+    //.expect(200)
+    .end();
+});
