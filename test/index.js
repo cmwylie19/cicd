@@ -1,4 +1,4 @@
-'use strict';
+
 
 var test = require('tape');
 var request = require('supertest');
@@ -10,7 +10,7 @@ test('Correct users returned', function (t) {
     .expect('Content-Type', /json/)
     .expect(200)
     .end(function (err, res) {
-      var expectedUsers = ['John', 'Betty', 'Hal'];
+      var expectedUsers = ['a', 'b', 'c'];
 
       t.error(err, 'No error');
       t.same(res.body, expectedUsers, 'Users as expected');
